@@ -1,0 +1,20 @@
+#cloud-config
+
+coreos:
+  units:
+    - name: oem-ens999.network
+      content: |
+        [Match]
+        Name=ens999
+
+        [Network]
+        DHCP=v4
+        DNS=8.8.8.8
+        DNS=8.8.4.4
+
+  oem:
+    id: csphere 
+    name: Csphere Release
+    version-id: @@OEM_VERSION_ID@@
+    home-url: http://cloud.nifty.com/
+    bug-report-url: https://github.com/coreos/bugs/issues
