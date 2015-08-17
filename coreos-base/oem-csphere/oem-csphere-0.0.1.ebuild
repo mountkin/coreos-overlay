@@ -25,9 +25,9 @@ src_prepare() {
 }
 
 src_install() {
-	into "/usr/share/csphere"
+	into "/usr/share/oem"
 
-	insinto "/usr/share/csphere"
+	insinto "/usr/share/oem"
 	doins "${T}/cloud-config.yml"
 	doins "${FILESDIR}/oem-release"
 	doins "${FILESDIR}/helloworld"
